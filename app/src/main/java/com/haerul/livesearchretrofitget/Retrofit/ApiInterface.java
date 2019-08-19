@@ -1,4 +1,4 @@
-package com.haerul.livesearchretrofitget;
+package com.haerul.livesearchretrofitget.Retrofit;
 
 
 import java.util.List;
@@ -15,6 +15,7 @@ public interface ApiInterface {
 
     @GET("getcontacts.php")
     Call<List<Contact>> getContact(
+            //Item_type es para verificar de que tabla
             @Query("item_type") String item_type,
             @Query("key") String keyword
     );

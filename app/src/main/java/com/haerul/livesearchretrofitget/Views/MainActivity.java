@@ -1,4 +1,4 @@
-package com.haerul.livesearchretrofitget;
+package com.haerul.livesearchretrofitget.Views;
 
 import android.app.SearchManager;
 import android.content.Context;
@@ -13,6 +13,11 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.haerul.livesearchretrofitget.Helpers.Adapter;
+import com.haerul.livesearchretrofitget.R;
+import com.haerul.livesearchretrofitget.Retrofit.ApiInterface;
+import com.haerul.livesearchretrofitget.Retrofit.Contact;
 
 import java.util.List;
 
@@ -41,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         layoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
-        fetchContact("users", "");
+        fetchContact("biblio", "");
 
     }
 
@@ -81,13 +86,12 @@ public class MainActivity extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                fetchContact("users", query);
+                fetchContact("biblio", query);
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                fetchContact("users", newText);
                 return false;
             }
         });

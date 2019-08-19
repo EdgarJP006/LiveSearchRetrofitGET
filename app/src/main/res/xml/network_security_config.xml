@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config
+        cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">sibiup.up.ac.pa/</domain>
+        <domain includeSubdomains="true">camposha.info/</domain>
+        <domain includeSubdomains="true">www.camposha.info/</domain>
+        <domain includeSubdomains="true">www.sibiup.up.ac.pa/</domain>
+    </domain-config>
+</network-security-config>
